@@ -1,0 +1,21 @@
+[{
+    "menuName":"我的考勤",
+    "menuIcon":"calendar",
+    "iconColor":"#8AC2F9",
+    "serf":"check"
+},{
+    "menuName":"考勤确认",
+    "menuIcon":"create",
+    "iconColor":"#ED7144",
+    "serf":"affirm-check"
+},{
+    "menuName":"考勤查询",
+    "menuIcon":"search",
+    "iconColor":"#7FE06C",
+    "serf":"inquire"
+},{
+    "menuName":"考勤导出",
+    "menuIcon":"wallet",
+    "iconColor":"#F9E3E4",
+    "serf":"export"
+}]

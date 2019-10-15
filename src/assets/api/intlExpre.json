@@ -1,0 +1,21 @@
+[{
+    "epsName":"EMS国际特快",
+    "epsImg":"assets/imgs/ems.png",
+    "epsDesp":"11183"
+},{
+    "epsName":"DHL敦豪国际快递",
+    "epsImg":"assets/imgs/DHL.png",
+    "epsDesp":"95380"    
+},{
+    "epsName":"TNT天地快件",
+    "epsImg":"assets/imgs/sto.png",
+    "epsDesp":"400-820-9868"   
+},{
+    "epsName":"FEDEX联邦快递",
+    "epsImg":"assets/imgs/yto.png",
+    "epsDesp":"400-886-1888"    
+},{
+    "epsName":"UPS联合包裹国际快递",
+    "epsImg":"assets/imgs/zto.png",
+    "epsDesp":"400-820-8388"   
+}]

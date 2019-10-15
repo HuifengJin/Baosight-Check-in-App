@@ -1,0 +1,31 @@
+[{
+    "menuName":"外协管理",
+    "menuIcon":"people",
+    "iconColor":"#8AC2F9",
+    "serf":"manager",
+    "serfDetail":"man-drc"
+},{
+    "menuName":"使用释放",
+    "menuIcon":"exit",
+    "iconColor":"#ED7144",
+    "serf":"manager",
+    "serfDetail":"man-manager"
+},{
+    "menuName":"外协评价",
+    "menuIcon":"paper",
+    "iconColor":"#7FE06C",
+    "serf":"assess",
+    "serfDetail":""
+},{
+    "menuName":"评价查询",
+    "menuIcon":"list-box",
+    "iconColor":"#F9E3E4",
+    "serf":"assessquery",
+    "serfDetail":""
+},{
+    "menuName":"信息查询",
+    "menuIcon":"person",
+    "iconColor":"#fd8b2d",
+    "serf":"messquery",
+    "serfDetail":""
+}]

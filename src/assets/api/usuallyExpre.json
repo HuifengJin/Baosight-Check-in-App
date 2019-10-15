@@ -1,0 +1,33 @@
+[{
+    "epsName":"中国邮政",
+    "epsImg":"assets/imgs/chnPost.png",
+    "epsDesp":"11185"
+},{
+    "epsName":"EMS",
+    "epsImg":"assets/imgs/ems.png",
+    "epsDesp":"11183"    
+},{
+    "epsName":"申通快递",
+    "epsImg":"assets/imgs/sto.png",
+    "epsDesp":"95543"   
+},{
+    "epsName":"圆通快递",
+    "epsImg":"assets/imgs/yto.png",
+    "epsDesp":"95554"    
+},{
+    "epsName":"中通快递",
+    "epsImg":"assets/imgs/zto.png",
+    "epsDesp":"95311"   
+},{
+    "epsName":"韵达快递",
+    "epsImg":"assets/imgs/yunDa.png",
+    "epsDesp":"95546"    
+},{
+    "epsName":"顺丰快递",
+    "epsImg":"assets/imgs/sf.png",
+    "epsDesp":"95338"   
+},{
+    "epsName":"天天快递",
+    "epsImg":"assets/imgs/tk.png",
+    "epsDesp":"400-188-8888"    
+}]

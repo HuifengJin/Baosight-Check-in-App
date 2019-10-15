@@ -1,0 +1,29 @@
+[{
+    "userid":"admin",
+    "username":"吕拉拉",
+    "userdept":"研究所",
+    "proBoss":"王BOSS",
+    "proManager":"王BOSS",
+    "tracks":"Work"
+},{
+    "userid":"admin1",
+    "username":"薄拉拉",
+    "userdept":"研究所",
+    "proBoss":"王BOSS",
+    "proManager":"王BOSS",
+    "tracks":"Work"
+},{
+    "userid":"admin2",
+    "username":"王拉拉",
+    "userdept":"研究所",
+    "proBoss":"王BOSS",
+    "proManager":"王BOSS",
+    "tracks":"unwork"
+},{
+    "userid":"admin3",
+    "username":"李拉拉",
+    "userdept":"研究所",
+    "proBoss":"王BOSS",
+    "proManager":"王BOSS",
+    "tracks":"holiday"
+}]
