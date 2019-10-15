@@ -1,0 +1,181 @@
+<ion-app >
+    <ion-backdrop  *ngIf="showAlertCard" tappable="true" stopPropagation="true" style="opacity: 0.1;" (ionBackdropTap)="ionBackdropTap()"></ion-backdrop>
+    <div class="ion-page">
+<ion-header  >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="返回" defaultHref="/manager"></ion-back-button>
+    </ion-buttons>
+    <ion-title>外协信息维护</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding  >
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">工号
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true" disabled="true"
+        [(ngModel)]="condition.ENAME"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">姓名
+          </ion-label>
+          <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+            [(ngModel)]="condition.CNAME"></ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">性别
+          </ion-label>
+          <ion-select interface="popover" [(ngModel)]="condition.GENDER" >
+            <ion-select-option value="M">男</ion-select-option>
+            <ion-select-option value="F">女</ion-select-option>
+          </ion-select>
+
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">手机
+      </ion-label>
+      <ion-input class="inputText" type="tel" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.TEL_PHONE"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">邮箱
+      </ion-label>
+      <ion-input class="inputText" type="email" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.EMAIL"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">身份证
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.ID_CARD"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">民族
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.NATIONALITY"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">学历
+        </ion-label>
+        <ion-select interface="popover" [(ngModel)]="condition.DEGREE" class="selectPos">
+            <ion-select-option *ngFor="let item of DegreeArray" [value]="item">{{item}}</ion-select-option>
+          </ion-select>
+  </ion-item>
+  <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">毕业年月
+        </ion-label>
+        <ion-input class="inputText" type="month" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.YEAR_OF_GRADUATION"></ion-input>
+  </ion-item>
+    <ion-item>
+      <ion-label position="stacked" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">毕业学院
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.UNIVERSITY"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">专业
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.MAJOR"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">专业技能
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.PROFESSION_SKILLS"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">职称
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.JOB_TITLE"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">综合保险
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.COMPREHENSIVE_INSURANCE"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">入职日期
+      </ion-label>
+      <ion-input class="inputText" type="date" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.INAUGURATION_DATE"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">安全教育日期
+      </ion-label>
+      <ion-input class="inputText" type="date" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.SAFETY_EDU_DATE"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">外协公司名称
+          </ion-label>
+          <ion-select interface="popover" [(ngModel)]="condition.OUTSOURCING_COMPANY" class="selectPos">
+              <ion-select-option *ngFor="let item of CompanyArray" [value]="item.CODE">{{item.NAME}}</ion-select-option>
+          </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">使用部门编号
+          </ion-label>
+          <ion-select interface="popover" [(ngModel)]="condition.USE_DEPT_ENAME" class="selectPos">
+              <ion-select-option *ngFor="let item of DeptArray" [value]="item.CODE">{{item.NAME}}</ion-select-option>
+          </ion-select>
+    </ion-item>
+  </ion-list>
+ 
+     
+  
+
+
+     
+        
+        
+        
+</ion-content>
+
+
+   
+
+
+<ion-footer >
+    <ion-toolbar>
+        <ion-row>
+            <ion-col  size="4">
+              <ion-button color="success" size="small" (click)="send()" expand="block" class="loginButtonPos" shape="round" fill="outline" (toParent)="runParent($event)">
+                分配
+              </ion-button>
+            </ion-col>
+            <ion-col size="4">
+                <ion-button size="small" (click)="presentAlertConfirm()" expand="block" class="loginButtonPos" shape="round" fill="outline">
+                  修改
+                </ion-button>
+              </ion-col>
+            <ion-col size="4">
+              <ion-button color="medium" size="small" (click)="presentAlertPrompt()" expand="block" class="loginButtonPos" shape="round" fill="outline">
+                注销
+              </ion-button>
+            </ion-col>
+            
+          </ion-row>
+    </ion-toolbar>
+  </ion-footer>
+</div>
+
+
+<!-- 父子组件传值时，子组件方法被调用后该方法this会改变指向 解决1：[closeChild]="closeChild.bind(this)" -->
+<!-- 但不推荐1，因为父组件创造数据，删除也应该交给父组件 -->
+<!-- 推荐2：使用output emit true后关闭 -->
+  <app-alert-radio class="alertCard alertPos animated "  *ngIf="showAlertCard" [class.fadeIn]="showFadeIn" [class.fadeOut]="!showFadeIn"
+                    [sendTotal]="sendTotal"  [getSendFormChild]="getSendFormChild" [closeChild]="closeChild.bind(this)"
+                    (toParent)="runParent($event)"
+  ></app-alert-radio>
+</ion-app>

@@ -1,0 +1,15 @@
+$select-width:70% !important;
+$select-maxWidth: 100%;
+
+ion-item{
+    .labelFont{
+        font-weight: bold;
+        font-family: '微软雅黑';
+        font-size: 15px;
+    }
+}
+
+.selectPos{
+    width:$select-width;
+    max-width: $select-maxWidth;
+}  

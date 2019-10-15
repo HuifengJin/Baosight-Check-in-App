@@ -1,0 +1,19 @@
+.orange{
+    color: orange;
+}
+
+ion-item{
+    .labelWidth {
+      flex: 0 0 60px;
+      width: 50px;
+      min-width: 50px;
+      max-width: 200px;
+      margin-right: 0;
+    }
+    .labelFont{
+      font: {
+        family:'微软雅黑';
+        size:15px;
+      }
+    }
+  } 

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="返回" defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>我的考勤</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+  <ion-calendar (monthChange)="monthChange($event)" [(ngModel)]="dateRange" [options]="optionsRange" [type]="type"
+  [format]="'YYYYMMDD'" (selectStart)="selectStart($event)" (selectEnd)="selectEnd($event)"></ion-calendar>
+
+  <ion-item>
+    <ion-input type="text" placeholder="开始时间" [(ngModel)]="condition.START_DATE"></ion-input>
+    <ion-icon slot="end" name="calendar"></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="结束时间" [(ngModel)]="condition.END_DATE"></ion-input>
+    <ion-icon slot="end" name="calendar"></ion-icon>
+  </ion-item>
+
+
+  <ion-footer>
+      <ion-toolbar>
+        <ion-row>
+          <ion-col size="6">
+            <ion-button (click)="businessTrip()" expand="block" color="primary">
+              出差
+            </ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button (click)="holiday()" expand="block" color="warning">
+              休假
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-toolbar>
+    </ion-footer>
+
+
+  
+
+</ion-list>
+
+  
+
+</ion-content>

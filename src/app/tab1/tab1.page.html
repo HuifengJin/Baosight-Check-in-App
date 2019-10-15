@@ -1,0 +1,81 @@
+
+<ion-content [scrollEvents]="true" (ionScrollEnd)="ScrollEnd($event)" (ionScroll)="logScrolling($event)">
+  <ion-card-header style="--background:#FEFEFE" class="cardPos">
+    <ion-card-subtitle style="font-size: 20px; text-align: right;" color="primary">{{today | date:'y-MM-dd'}}</ion-card-subtitle>
+    <ion-card-title class="cardFont">{{username}},欢迎登录</ion-card-title>
+  </ion-card-header>
+  
+  <ion-grid class="light-bg " margin-top>
+    <ion-row>
+      <ion-col size="12" class="colBox">
+        <span class="gridTitle">考勤管理</span>
+        <ion-icon name="arrow-dropright-circle" class="iconPos"></ion-icon>
+        
+      </ion-col>
+    </ion-row>
+    <ion-row  class="homeGrid" >
+      <ion-col size="6" size-lg="3" class="homeFirstCol"
+         *ngFor="let item of homeData;let i=index" 
+         [class.rightBorderNone]="i%2!=0 || homeData.length==1" 
+         [class.bottomBorderNone]="i>1" 
+         [class.secondBox]="i==1"
+         [class.firstBorderNone]="homeData.length==1"
+         (click)="goDetail(item.serf,item)"
+         >
+            <ion-icon name="{{item.menuIcon}}" class="iconHomeSize" [ngStyle]="{'color':item.iconColor}"></ion-icon>
+
+            <h4>{{item.menuName}}</h4>
+      
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="light-bg" margin-top>
+      <ion-row>
+        <ion-col size="12" class="colBox">
+          <span class="gridTitle">考勤管理</span>
+          <ion-icon name="arrow-dropright-circle" class="iconPos"></ion-icon>
+          
+        </ion-col>
+      </ion-row>
+      <ion-row  class="homeGrid" >
+        <ion-col size="6" size-lg="3" class="homeFirstCol"
+           *ngFor="let item of kaoqianAll;let i=index" 
+           [class.rightBorderNone]="i%2!=0 || kaoqianAll.length==1" 
+           [class.bottomBorderNone]="i>1" 
+           [class.secondBox]="i==1"
+           [class.firstBorderNone]="homeData.length==1"
+           (click)="goDetail(item.serf,item)"
+           >
+              <ion-icon name="{{item.menuIcon}}" class="iconHomeSize" [ngStyle]="{'color':item.iconColor}"></ion-icon>
+  
+              <h4>{{item.menuName}}</h4>
+        
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="light-bg" margin-top>
+        <ion-row>
+          <ion-col size="12" class="colBox">
+            <span class="gridTitle">外协管理</span>
+            <ion-icon name="arrow-dropright-circle" class="iconPos"></ion-icon>
+            
+          </ion-col>
+        </ion-row>
+        <ion-row  class="homeGrid" >
+          <ion-col size="6" size-lg="3" class="homeFirstCol"
+             *ngFor="let item of waixie;let i=index" 
+             [class.rightBorderNone]="i%2!=0 || waixie.length==1" 
+             [class.bottomBorderNone]="i>1" 
+             [class.secondBox]="i==1"
+             [class.firstBorderNone]="waixie.length==1"
+             (click)="goDetail(item.serf,item)"
+             >
+                <ion-icon name="{{item.menuIcon}}" class="iconHomeSize" [ngStyle]="{'color':item.iconColor}"></ion-icon>
+    
+                <h4>{{item.menuName}}</h4>
+          
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+ 
+</ion-content>

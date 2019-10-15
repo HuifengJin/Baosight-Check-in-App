@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="返回" defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>外协管理</ion-title>
+ 
+    <ion-button (click)="presentModal()" slot="end" fill="clear" size="small" *ngIf="detailUrl=='man-drc'">
+        <ion-icon slot="icon-only" name="add" color="light"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-card style="margin-top:3px">
+    <ion-card-content no-padding style="background:#FFFFFF">
+
+      <ion-grid no-padding>
+        <ion-row>
+          <ion-col size="6">
+            <ion-item>
+              <ion-label position="stacked"
+                style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">工号</ion-label>
+              <ion-input class="inputText" type="text" autofocus="true" mode="md" inputmode="text" clearinput="true"
+                [(ngModel)]="condition.ENAME"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="6">
+            <ion-item>
+              <ion-label position="stacked"
+                style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">姓名</ion-label>
+              <ion-input class="inputText"  type="text" mode="md" inputmode="text" clearinput="true"
+                [(ngModel)]="condition.CNAME"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-item>
+              <ion-label position="stacked"
+                style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">部门</ion-label>
+              <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+                [(ngModel)]="condition.USE_DEPT_ENAME"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="6">
+            <ion-item>
+              <ion-label position="stacked"
+                style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">状态</ion-label>
+              <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" [(ngModel)]="condition.STATUS">
+                <ion-select-option *ngFor="let item of status" value="{{item.value}}">{{item.desc}}</ion-select-option>
+                <!-- <ion-select-option value="blonde">Blonde</ion-select-option>
+                          <ion-select-option value="black">Black</ion-select-option>
+                          <ion-select-option value="red">Red</ion-select-option> -->
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div padding>
+        <ion-button (click)="query()" expand="block" class="loginButtonPos">
+          确认
+        </ion-button>
+      </div>
+    </ion-card-content>
+
+  </ion-card>
+  <ion-card>
+      <ion-list >
+          <ion-item *ngFor="let item of managerList" (click)="goDetail(item)"> <!--[attr.track]="item.tracks | lowercase"-->
+            <ion-label class="labelBorder">
+              <h3>{{item.ENAME}} &mdash; {{item.CNAME}}</h3>
+              <p color="primary">
+                使用部门：{{item.USE_DEPT_ENAME}}
+              </p>
+              <p>
+                项目总监：{{item.PD}}
+              </p>
+              <p>
+                项目经理：{{item.PM}}
+              </p>
+            </ion-label>
+            <ion-icon *ngIf="releaseFlag" slot="start" name="checkmark" class="orange"></ion-icon>
+          </ion-item>
+        
+        </ion-list>
+  </ion-card>
+
+
+
+
+
+</ion-content>

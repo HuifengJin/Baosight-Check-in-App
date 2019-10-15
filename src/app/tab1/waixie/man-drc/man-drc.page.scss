@@ -1,0 +1,26 @@
+$select-width:70% !important;
+$select-maxWidth: 100%;
+
+
+
+.selectPos{
+    width:$select-width;
+    max-width: $select-maxWidth;
+}  
+
+
+.alertCard{
+    min-width: 300px;
+    width: 300px;
+    min-height: auto;
+    height: 400;
+    max-height: 90%;
+}
+.alertPos{
+    position:fixed;
+    z-index: 8;
+    top:50%;
+    left:50%;
+    margin-left:-150px; /* width的一半的相反数 */
+    margin-top:-170px;  /* height的一半的相反数 */
+}

@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="返回" defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>考勤查询</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+
+  <ion-card style="margin-top:3px">
+    <ion-card-content no-padding style="background:#FFFFFF">
+      <ion-grid no-padding>
+        <ion-row>
+          <ion-col size="6">
+            <ion-item>
+              <ion-label position="stacked"
+              style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">工号</ion-label>
+              <ion-input class="inputText" type="text" autofocus="true" mode="md" inputmode="text" clearinput="true"
+                [(ngModel)]="condition.ENAME"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="6">
+            <ion-item>
+              <ion-label position="stacked"
+              style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">姓名</ion-label>
+              <ion-input class="inputText"  type="text" mode="md" inputmode="text" clearinput="true"
+                [(ngModel)]="condition.CNAME"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="6">
+            <ion-item>
+              <ion-label position="stacked"
+              style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">部门</ion-label>
+              <ion-select interface="popover" [(ngModel)]="condition.DEPT_ENAME" (ionChange)="ionChange($event)">
+                <ion-select-option *ngFor="let item of department" value="{{item.value}}">{{item.desc}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="6">
+              <ion-item>
+                <ion-label position="stacked"
+                style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">行政组</ion-label>
+                <ion-select interface="popover" [(ngModel)]="condition.GROUP_ENAME">
+                  <ion-select-option *ngFor="let item of executive" value="{{item.value}}">{{item.desc}}</ion-select-option>
+                </ion-select>
+              </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+              <ion-item>
+                  <ion-label position="stacked"
+                  style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">月份</ion-label>
+                  <ion-datetime display-format="YYYY-MM" [(ngModel)]="condition.MONTH"></ion-datetime>
+                </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <div padding>
+          <ion-button (click)="find()" expand="block" class="loginButtonPos">
+            查询
+          </ion-button>
+      </div>
+
+    </ion-card-content>
+    
+  </ion-card>
+
+  <ion-list>
+      <ion-card *ngFor="let item of inqList">
+        <ion-item (click)="goDetail(item)">
+          <ion-label>
+            <h4>工号：{{item.ENAME}} &shy; 姓名：{{item.CNAME}}</h4>
+            <h4>休假：{{item.HOLIDAY}} 天</h4>
+            <h4>出差：{{item.BUSINESS}} 天</h4>
+          </ion-label>
+        </ion-item>
+     </ion-card>
+ 
+    </ion-list>
+
+</ion-content>

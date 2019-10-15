@@ -1,0 +1,55 @@
+.loginButtonPos{
+    margin-top: -8px;
+    margin-bottom: -4px;
+}
+
+$categories: (
+  work: var(--ion-color-primary),
+  unwork: #ac282b,
+  communication: #8e8d93,
+  tooling: #fe4c52,
+  services: #fd8b2d,
+  holiday: #fed035,
+  workshop: #69bb7b,
+  food: #3bc7c4,
+  documentation: #b16be3,
+  navigation: #6600cc
+);
+
+// map-remove($map,$key) 函数是用来删除当前 $map 中的某一个 $key，从而得到一个新的 map。
+// 其返回的值还是一个 map。他并不能直接从一个 map 中删除另一个 map，仅能通过删除 map 中的某个 key 得到新 map。
+@each $track, $value in map-remove($categories) {
+    ion-item[track='#{$track}'] .labelBorder {
+    border-left: 2px solid $value;
+    padding-left: 10px;
+  }
+}
+
+.labelBorder h3{
+    font-family: '微软雅黑';
+    font-weight: bold;
+}
+ion-item{
+  .labelWidth {
+    flex: 0 0 60px;
+    width: 50px;
+    min-width: 50px;
+    max-width: 200px;
+    margin-right: 0;
+  }
+  .labelFont{
+    font: {
+      family:'微软雅黑';
+      size:15px;
+    }
+  }
+} 
+
+.orange{
+  color: orange;
+}
+
+
+.ButtonPos{
+  float: right;
+}

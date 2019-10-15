@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button text="返回" defaultHref="/tabs/tab1"></ion-back-button>
+      </ion-buttons>
+      <ion-title>考勤查询</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+      <ion-card>
+          <ion-item>
+            <ion-label>
+                <h4>工号：{{condition.ENAME}} &shy; 姓名：{{condition.CNAME}}</h4>
+                <h4>休假：{{condition.HOLIDAY}} 天</h4>
+                <h4>出差：{{condition.BUSINESS}} 天</h4>
+            </ion-label>
+          </ion-item>
+      </ion-card>
+
+      <ion-calendar (onChange)="onChange($event)" [(ngModel)]="dateRange" [options]="optionsRangeD" [type]="type"
+        [format]="'YYYY-MM-DD'"></ion-calendar>
+
+      <ion-footer>
+        <ion-toolbar>
+          <ion-row>
+            <ion-col size="12">
+              <ion-button (click)="goBack()" expand="block" color="light">
+                返回
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-toolbar>
+      </ion-footer>
+
+  </ion-list>
+
+</ion-content>

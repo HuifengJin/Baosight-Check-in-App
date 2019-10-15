@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/{{back}}" text="返回"></ion-back-button>
+    </ion-buttons>
+    <ion-title>外协评价</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+      <ion-item>
+        <ion-label position="fixed" class="labelFont">工号
+        </ion-label>
+        <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.ENAME" disabled="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed" class="labelFont">姓名
+        </ion-label>
+        <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.CNAME" disabled="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed" class="labelFont">项目号
+        </ion-label>
+        <ion-input class="inputText" type="tel" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.PROJECT_NO" disabled="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed" class="labelFont">项目名称
+        </ion-label>
+        <ion-input class="inputText" type="tel" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.PROJECT_NAME" disabled="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed" class="labelFont">使用人
+        </ion-label>
+        <ion-input class="inputText" type="tel" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.USE_CNAME" disabled="true"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label position="fixed" class="labelFont">评分
+          </ion-label>
+          <ion-input class="inputText" type="number" mode="md" inputmode="numeric" clearinput="true"
+            [(ngModel)]="condition.SCORE" (ionBlur)="setGrade(condition.number)"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="fixed" class="labelFont">等级
+            </ion-label>
+            <ion-input class="inputText" type="tel" mode="md" inputmode="text" clearinput="true" disabled="true"
+              [(ngModel)]="condition.GRADE"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="fixed" class="labelFont">缺勤天数
+              </ion-label>
+              <ion-input class="inputText" type="tel" mode="md" inputmode="text" clearinput="true"
+                [(ngModel)]="condition.ABSENT_DAYS"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="fixed" class="labelFont">缺勤原因
+              </ion-label>
+              <ion-input class="inputText" type="tel" mode="md" inputmode="text" clearinput="true"
+                [(ngModel)]="condition.ABSENT_REASON"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="fixed" class="labelFont">工作技能
+                </ion-label>
+                <ion-input class="inputText" type="tel" mode="md" inputmode="text" clearinput="true"
+                  [(ngModel)]="condition.WORK_SKILL"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="fixed" class="labelFont">工作态度
+                </ion-label>
+                <ion-input class="inputText" type="tel" mode="md" inputmode="text" clearinput="true"
+                  [(ngModel)]="condition.WORK_ATTITUDE"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="fixed" class="labelFont">工作负荷
+                </ion-label>
+                <ion-input class="inputText" type="tel" mode="md" inputmode="text" clearinput="true"
+                  [(ngModel)]="condition.WORK_LOAD"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="fixed" class="labelFont">工作质量
+                </ion-label>
+                <ion-input class="inputText" type="tel" mode="md" inputmode="text" clearinput="true"
+                  [(ngModel)]="condition.WORK_QUALITY"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="fixed" class="labelFont">备注
+                </ion-label>
+                <ion-input class="inputText" type="tel" mode="md" inputmode="text" clearinput="true"
+                  [(ngModel)]="condition.NOTE"></ion-input>
+              </ion-item>
+    </ion-list>
+    <div padding>
+      
+      <ion-button (click)="assessConfirm()" expand="block">
+        评价
+      </ion-button>
+    </div>
+  
+  </ion-content>

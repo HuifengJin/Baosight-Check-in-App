@@ -1,0 +1,109 @@
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+:host {
+  ion-content {
+    --background:#F7F7F7;
+ 
+  }
+}
+.cardPos{
+  // border-bottom: 1px solid#989aa2;
+  box-shadow:0px 0px 3px #989aa2;
+  padding: 40px 20px 25px;
+}
+
+
+.cardFont{
+  font-family: '微软雅黑'
+}
+
+
+.titleDivP{
+  margin-top:10px;
+  padding-bottom:10px;
+  font-size:18px;
+}
+.titleDivColor{
+  color:#DCDEE5;
+}
+.iconBlue{
+  color: #8AC2F9;
+}
+.iconOrigin{
+  color:#ED7144;
+}
+.iconHomeSize{
+  font-size: 35px;
+  margin-top:8px;
+  margin-bottom: -8px;
+}
+.homeGrid{
+  text-align: center;
+}
+.bottomBorderNone{
+  // border-top: 1px solid #EDEDED;
+  //  padding-top:5px;
+  border-bottom:none;
+}
+.homeFirstCol{
+  border: 1px solid #EDEDED;
+  padding-top:5px;
+  border-left:none;
+  border-top:none;
+  // border-bottom: 1px solid #EDEDED;
+}
+.rightBorderNone{
+  border-right:none
+}
+.firstBorderNone{
+  border:none
+}
+
+.stable-bg {
+  background-color: whitesmoke;
+}
+.light-bg{
+  background-color: #fff;
+}
+.lastGridColor{
+  color:#817D88;
+}
+ 
+.lastGridColor ion-col{
+  font-size:22px;
+}
+.lastGridColor h6{
+  margin-top:8px;
+  font-size:14px;
+  color:black;
+}
+.colBox{
+  border-bottom: 1px solid #EDEDED;
+}
+.gridTitle{
+  font-family: '微软雅黑';
+  font-weight: bold;
+  position: absolute;
+}
+.iconPos{
+  position: relative;
+  left: 66px;
+  top: 1.5px;
+  color:#EE8832;
+}
+@media (min-width: 992px) {
+  /* Doesn't work :( */
+  .secondBox{
+    border-right: 1px solid #EDEDED;
+  }
+  .homeTopRow{
+    border-top: none;
+     margin-top:0;
+  }
+}
+
+.orange{
+  color: orange;
+}

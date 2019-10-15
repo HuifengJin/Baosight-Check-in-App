@@ -1,0 +1,218 @@
+<ion-header  >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="返回" defaultHref="/messquery"></ion-back-button>
+    </ion-buttons>
+    <ion-title>信息查询</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding  >
+  <ion-list>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">工号
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true" disabled="true"
+        [(ngModel)]="condition.ENAME"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">姓名
+          </ion-label>
+          <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+            [(ngModel)]="condition.CNAME"></ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">性别
+          </ion-label>  
+          <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.GENDER"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">手机
+      </ion-label>
+      <ion-input class="inputText" type="tel" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.TEL_PHONE"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">邮箱
+      </ion-label>
+      <ion-input class="inputText" type="email" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.EMAIL"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">身份证
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.ID_CARD"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">民族
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.NATIONALITY"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">学历
+        </ion-label>
+        <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.DEGREE"></ion-input>
+  </ion-item>
+  <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">毕业年月
+        </ion-label>
+        <ion-input class="inputText" type="month" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.YEAR_OF_GRADUATION"></ion-input>
+  </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">毕业学院
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.UNIVERSITY"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">专业
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.MAJOR"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">专业技能
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.PROFESSION_SKILLS"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">职称
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.JOB_TITLE"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">综合保险
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.COMPREHENSIVE_INSURANCE"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">入职日期
+      </ion-label>
+      <ion-input class="inputText" type="date" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.INAUGURATION_DATE"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">安全教育日期
+      </ion-label>
+      <ion-input class="inputText" type="date" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.SAFETY_EDU_DATE"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">外协公司名称
+          </ion-label>
+          <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.OUTSOURCING_COMPANY"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">使用部门编号
+          </ion-label>
+          <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.USE_DEPT_ENAME"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">项目经理
+          </ion-label>
+          <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.PM"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">项目总监
+          </ion-label>
+          <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.PD"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">项目编号
+          </ion-label>
+          <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.PROJECT_NO"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">项目名称
+          </ion-label>
+          <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.PROJECT_NAME"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">使用人
+          </ion-label>
+          <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.USE_ENAME"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">使用类型
+          </ion-label>
+          <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.USE_TYPE"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">参与模块
+          </ion-label>
+          <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.PARTICIPATION_MODULE"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">擅长技能
+          </ion-label>
+          <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.GOOD_AT_SKILLS"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">开始使用日期
+        </ion-label>
+        <ion-input class="inputText" type="date" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.USE_START_DATE"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">预计使用结束日期
+          </ion-label>
+          <ion-input class="inputText" type="date" mode="md" inputmode="text" clearinput="true"
+            [(ngModel)]="condition.EXPECTED_USE_END_DATE"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">释放日期
+            </ion-label>
+            <ion-input class="inputText" type="date" mode="md" inputmode="text" clearinput="true"
+              [(ngModel)]="condition.RELEASE_USE_DATE"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">状态
+                </ion-label>
+                <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+                [(ngModel)]="condition.STATUS"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">最新评价
+                </ion-label>
+                <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+                [(ngModel)]="condition.LATEST_EVALUATION"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;">离职日期
+              </ion-label>
+              <ion-input class="inputText" type="date" mode="md" inputmode="text" clearinput="true"
+                [(ngModel)]="condition.RESIGNATION_DATE"></ion-input>
+            </ion-item>
+  </ion-list>
+ 
+     
+  
+
+
+     
+        
+        
+        
+</ion-content>

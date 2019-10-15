@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="返回" defaultHref="/manager"></ion-back-button>
+    </ion-buttons>
+    <ion-title>外协管理</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label position="fixed" class="labelFont">工号
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.ENAME" disabled="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" class="labelFont">姓名
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.CNAME" disabled="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" class="labelFont">项目号
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.PROJECT_NO" required="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" class="labelFont">项目名称
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.PROJECT_NAME" required="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" class="labelFont">使用人
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.USE_ENAME" required="true"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="fixed" class="labelFont">使用类型
+          </ion-label>
+          <ion-select interface="popover" [(ngModel)]="condition.USE_TYPE" class="selectPos">
+              <ion-select-option *ngFor="let item of UseTypeArray" [value]="item.CODE">{{item.NAME}}</ion-select-option>
+          </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" class="labelFont">参与模块
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.PARTICIPATION_MODULE" required="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" class="labelFont">擅长技能
+      </ion-label>
+      <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.GOOD_AT_SKILLS" required="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">使用开始日期
+      </ion-label>
+      <ion-input class="inputText" type="date" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.USE_START_DATE" required="true"></ion-input>
+      </ion-item>
+    <ion-item>
+      <ion-label position="fixed" style="font-weight: bold;font-family: '微软雅黑';font-size: 15px;margin-bottom:0">预计使用结束日期
+      </ion-label>
+      <ion-input class="inputText" type="date" mode="md" inputmode="text" clearinput="true"
+        [(ngModel)]="condition.EXPECTED_USE_END_DATE" required="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed" class="labelFont">最新评价
+        </ion-label>
+        <ion-input class="inputText" type="text" mode="md" inputmode="text" clearinput="true"
+          [(ngModel)]="condition.LATEST_EVALUATION" required="true"></ion-input>
+      </ion-item>
+
+  </ion-list>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-lg="6">
+        <ion-button (click)="Practice()" expand="block">
+          使用
+        </ion-button>
+      </ion-col>
+      <ion-col size="12" size-lg="6">
+        <ion-button (click)="Release()" expand="block" color="danger" >
+          释放
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
