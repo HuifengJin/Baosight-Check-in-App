@@ -1,0 +1,40 @@
+<!-- <div class="bg"> -->
+
+
+<ion-content >
+  
+  <!-- <ion-card class="cardPos" color="light"> -->
+    <ion-card-header style="--background:#FEFEFE" class="cardPos">
+      <!--<ion-card-subtitle style="font-size: 20px" color="primary">宝信软件</ion-card-subtitle>-->
+      <ion-card-subtitle>
+      <ion-img src="assets/images/Baosight.png" alt="宝信软件" class="imageSize"></ion-img>
+      </ion-card-subtitle>
+      <br>
+      <ion-card-title>欢迎来到工作管理APP</ion-card-title>
+    </ion-card-header>
+  <!-- </ion-card> -->
+  <ion-list inset="true" style="background: #F7F7F7">
+      <ion-item style="--background: #F7F7F7">
+        <ion-label position="floating">请输入您的用户名</ion-label>
+        <ion-input type="text" autofocus="true" mode="md" inputmode="text" clearinput="true" [(ngModel)]="user.username"></ion-input>
+      </ion-item>
+      <ion-item style="--background: #F7F7F7">
+          <ion-label position="floating">请输入您的密码</ion-label>
+          <ion-input type="password" mode="md" inputmode="password" clearinput="true" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
+      <ion-item style="--background: #F7F7F7;text-align: center">
+          <ion-button (click)="login()"  class="loginButtonPos" shape="round" >
+              登录
+          </ion-button>
+      </ion-item>
+
+      <!--按钮 忘记密码-->
+        <ion-button fill="clear" shape="round" class="ForgetButtonPos" style="font-family: '微软雅黑';font-size: 15px;margin-bottom:0">
+          <ion-icon slot="start" name="help" no-padding></ion-icon>
+            忘记密码
+        </ion-button>
+        
+  </ion-list>
+ 
+</ion-content>
+

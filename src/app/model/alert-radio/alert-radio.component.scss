@@ -1,0 +1,24 @@
+.groupScoll{max-height: 240px;
+
+overflow-y: scroll;}
+ion-col{
+    .itemHeader{
+        --background: var(--ion-color-light)
+    }
+}
+.checkItem {
+    --background: #fff !important;
+}
+
+@mixin alertButton($width,$margin,$border-radius) {
+    width:$width;
+    margin:$margin;
+    border: 0.55px solid rgba(var(--ion-text-color-rgb,0,0,0),.2){
+        radius:$border-radius;
+        bottom:none;
+        left:none;
+    }
+}
+.button-div{
+    @include alertButton(50%,0,0);
+}

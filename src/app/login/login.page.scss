@@ -1,0 +1,45 @@
+
+.bgColor{
+             background-color: #3d7eaa;
+       }
+// ion-content {
+//         --background:linear-gradient(25deg, #be93c5, #3d7eaa, #ffe47a ,#dae2f8, #d6a4a4);
+       
+// }
+
+// :host {
+//     ion-content {
+//       --background: url('../../assets/bg.jpg') no-repeat center center / 100% 100%;
+   
+//     }
+//   }
+:host {
+  ion-content {
+    --background:#F7F7F7;
+ 
+  }
+}
+.cardPos{
+  // border-bottom: 1px solid#989aa2;
+  box-shadow:0px 0px 3px #989aa2;
+  padding: 50px 20px 25px;
+}
+.loginButtonPos{
+  margin: auto;
+  margin-top:60px;
+  height: 2.8em !important;
+  font-size: 16px !important;
+  font-weight: 500;
+  letter-spacing: 0.1em !important;
+  width: 30em;
+  --border-radius: 20px !important;
+}
+
+.ForgetButtonPos{
+  float: right;
+}
+
+.imageSize{
+  height: 5em !important;
+  width: 5em !important;
+}
