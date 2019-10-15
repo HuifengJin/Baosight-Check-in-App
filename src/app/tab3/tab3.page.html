@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Three
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!-- <form (onSubmit)="processForm($event)">
+        <ion-list>
+          <ion-item>
+            <ion-input required (onInput)="handleFirstNameValue($event)" [value]="firstName" type="text" placeholder="First Name"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input required (onInput)="handleLastNameValue($event)" [value]="lastName" type="text" placeholder="Last Name"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <div>
+          <ion-button expand="block" type="submit">Create Account</ion-button>
+        </div>
+    </form> -->
+    <form (onsubmit)="processForm($event)">
+        <ion-list class="list list-ios hydrated">
+          <ion-item class="in-list item ion-focusable hydrated item-interactive item-input item-has-placeholder item-has-focus">
+            <ion-input required="" type="text" placeholder="First Name" (oninput)="handleFirstNameValue($event)" class="sc-ion-input-ios-h sc-ion-input-ios-s hydrated has-focus"><input class="native-input sc-ion-input-ios" aria-labelledby="ion-input-1-lbl" autocapitalize="off" autocomplete="off" autocorrect="off" name="ion-input-1" placeholder="First Name" required="" type="text"></ion-input>
+          </ion-item>
+
+          <ion-item class="in-list item ion-focusable hydrated item-interactive item-input item-has-placeholder">
+            <ion-input required="" type="text" placeholder="Last Name" (oninput)="handleLastNameValue($event)" class="sc-ion-input-ios-h sc-ion-input-ios-s hydrated"><input class="native-input sc-ion-input-ios" aria-labelledby="ion-input-0-lbl" autocapitalize="off" autocomplete="off" autocorrect="off" name="ion-input-0" placeholder="Last Name" required="" type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <div>
+          <ion-button expand="block" type="submit" class="button button-block button-solid ion-activatable ion-focusable hydrated">Create Account</ion-button>
+        </div>
+      </form>
+
+</ion-content>

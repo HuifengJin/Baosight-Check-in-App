@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      我的
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div color="primary" class="cardPos">
+      <img src="assets/set.png" alt="" class="imgCss"> 
+      <div style="display: inline;" class="rightDiv">
+        <h3 class="cardTitle">{{username}}</h3>
+        <ion-chip color="light" outline="true" style="height:25px;margin-left: 8px">
+            <ion-label style="font-size: 100;color:white">{{ENAME}}</ion-label>
+          </ion-chip>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <ion-list margin-top style="padding-top:8px;padding-bottom: 8px">
+      <ion-item style="--border-color:#F0F0F0"  (click)="goDefend()">
+        <ion-thumbnail slot="start">
+            <!-- <ion-icon name="thumbs-up"></ion-icon> -->
+            <img src="assets/defend.png" alt="" style="width: 90%;height: 90%;margin-left: 8%">
+        </ion-thumbnail>
+          
+        <ion-label class="labelSize">维护个人信息</ion-label>
+      </ion-item>
+      <!-- routerLink="update" 在第一次成功的前进/后退导航后无法正常工作 目前唯一可行的解​​决方案似乎只是使用绝对路由，
+使用绝对路由或导航回根将解决问题。希望他们能尽快找到解决方案，尽管4.0.2还没有解决问题。 -->
+      <ion-item style="--border-color:white" (click)="goUpdate()">
+          <ion-thumbnail slot="start">
+              <!-- <ion-icon name="thumbs-up"></ion-icon> -->
+              <img src="assets/account.png" alt="" style="width: 90%;height: 90%;margin-left: 8%">
+          </ion-thumbnail>
+        <ion-label class="labelSize">修改密码</ion-label>
+      </ion-item>
+    </ion-list>
+   
+</ion-content>

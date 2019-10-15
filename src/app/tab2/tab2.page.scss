@@ -1,0 +1,49 @@
+:host {
+    ion-content {
+      --background:#F7F7F7;
+   
+    }
+
+  }
+  .header-ios ion-toolbar:last-child {
+     --border-width: 0 0 0; 
+}
+  .cardPos{
+    // border-bottom: 1px solid#989aa2;
+    box-shadow:0px 0px 3px #989aa2;
+    padding-top:5px;
+    height: 100px;
+    background:#3880ff; 
+    // padding: 25px 20px;
+  }
+  .cardFont{
+    font-family: '微软雅黑'
+  }
+.imgCss{
+    display: inline;
+    width:80px;
+    height:80px;
+    border-radius:20px; 
+    float: left;
+    margin-left:8%;
+    border: 1px solid #f4f5f8;
+}
+.rightDiv{
+    float: left;
+    margin-left: 8px;
+}
+.cardTitle{
+    color:white;
+    margin-left: 8px;
+    margin-bottom: -1px;
+    font-family: '微软雅黑';
+
+}
+.clear{
+    clear:both;
+}
+.labelSize{
+    font-weight: bold;
+    font-family:'微软雅黑';
+    font-size:18px;
+}

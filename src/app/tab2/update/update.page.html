@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="返回" defaultHref="/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+    <ion-title>修改密码</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list  margin-top>
+        <ion-item >
+          <ion-label position="floating" style="font-weight: bold;font-family: '微软雅黑'">新密码</ion-label>
+          <ion-input required type="text" autofocus="true" mode="md" inputmode="text" clearinput="true" [(ngModel)]="user.PASSWORD"></ion-input>
+        </ion-item>
+        <ion-item >
+            <ion-label position="floating" style="font-weight: bold;font-family: '微软雅黑'">确认新密码</ion-label>
+            <ion-input type="text" mode="md" inputmode="text" clearinput="true" [(ngModel)]="user.newPASSWORD"></ion-input>
+        </ion-item>
+    </ion-list>
+    <div padding>
+        <ion-button (click)="confirm()" expand="block"   >
+            确认
+        </ion-button>
+        <ion-button (click)="Back()" expand="block" class="loginButtonPos"  color="light">
+            返回
+        </ion-button>
+    </div>
+</ion-content>
